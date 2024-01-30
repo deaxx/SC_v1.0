@@ -2828,6 +2828,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C1" library="discretes-dev" deviceset="CAP0402" device="" value="100nf"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="C2" library="discretes-dev" deviceset="CAP0402" device="" value="100n"/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2944,6 +2946,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="+3V3" gate="G$1" x="78.74" y="53.34" smashed="yes" rot="R270">
 <attribute name="VALUE" x="73.66" y="55.88" size="1.778" layer="96"/>
 </instance>
+<instance part="C2" gate="G$1" x="162.56" y="30.48" smashed="yes">
+<attribute name="NAME" x="164.084" y="32.131" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="GND7" gate="1" x="162.56" y="22.86" smashed="yes">
+<attribute name="VALUE" x="160.02" y="20.32" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -3021,6 +3029,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="6.35" y1="45.72" x2="5.08" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="162.56" y1="26.67" x2="162.56" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -3138,8 +3151,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="157.48" y1="35.56" x2="165.1" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="35.56" x2="162.56" y2="35.56" width="0.1524" layer="91"/>
 <label x="160.02" y="35.56" size="1.778" layer="95"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="162.56" y1="35.56" x2="165.1" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="34.29" x2="162.56" y2="35.56" width="0.1524" layer="91"/>
+<junction x="162.56" y="35.56"/>
 </segment>
 <segment>
 <pinref part="TP2" gate="G$1" pin="TP"/>
