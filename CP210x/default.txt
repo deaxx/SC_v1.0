@@ -1,3 +1,0 @@
-vid 10C4
-pid EA60
-CP2102 USB to UART Bridge Controller
